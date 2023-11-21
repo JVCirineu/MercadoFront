@@ -1,33 +1,10 @@
 <div class="container d-flex justify-content-between tamanho">
-    <div class="card" style="width: 18rem;">
-        <img src="../../assets/ketchup.webp" class="card-img-top" alt="...">
+    <div class="card" style="width: 18rem;" *ngFor="let p of produtos">
+        <img src="{{p.img}}" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Ketchup Tradicional</h5>
-            <p class="card-text">Hemmer 320g</p>
-            <a href="#" class="btn btn-primary container-fluid "(click)="Comprar()">Comprar</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="../../assets/maionese.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Maionese Tradicional</h5>
-            <p class="card-text">Hemmer 930g</p>
-            <a href="#" class="btn btn-primary container-fluid "(click)="Comprar()">Comprar</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="../../assets/pãoalho.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Pão de Alho</h5>
-            <p class="card-text">Santa Massa</p>
-            <a href="#" class="btn btn-primary container-fluid "(click)="Comprar()">Comprar</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="../../assets/leite.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Leite Integral</h5>
-            <p class="card-text">Italac 1L</p>
+            <h5 class="card-title">{{p.nome}}</h5>
+            <h5 class="card-title">{{p.valor | currency: 'BRL'}}</h5>
+            <p class="card-text">{{p.descricao}}</p>
             <a href="#" class="btn btn-primary container-fluid "(click)="Comprar()">Comprar</a>
         </div>
     </div>
